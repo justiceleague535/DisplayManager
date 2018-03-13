@@ -123,11 +123,3 @@ class TextDisplay:
         root.geometry('250x150+1500+300')
         label = Label(root, text= totalData, width=40, font=(None,15))
         label.pack()
-
-        
-plate = DataPlate('dataplate.txt')
-plate.openFile()
-
-test = QRCreator(1,2,3,4,5,plate)
-test.display()
-
