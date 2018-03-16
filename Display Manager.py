@@ -66,6 +66,21 @@ class QRCreator:
 
         img.save("image.jpg")
         img.show()
+
+        data1 = "Vehicle Odometer: " + str(self.odometerRead)
+        data2 = "Total Engine Hours: " + str(self.engineHours)
+        data3 = "Total Fuel Used: " + str(self.fuelUsed)
+        data4 = "Average Fuel Economy: " + str(self.fuelEconomy)
+        data5 = "Fuel Level 1: " + str(self.fuelLevel1)
+        data6 = "Serial Number: " + str(self.serialNumber)
+        data7 = "NIIN: " + self.niin_string
+
+        totalData = data6 + '\n' + data7 + '\n' + data1 + '\n' + data2 + '\n' + data3 + '\n' + data4 + '\n' + data5
+
+        f = open('backupinfo.txt','w')
+        f.write(totalData)
+        f.close()
+
         
 
 class DataPlate:
@@ -123,3 +138,9 @@ class TextDisplay:
         root.geometry('250x150+1500+300')
         label = Label(root, text= totalData, width=40, font=(None,15))
         label.pack()
+
+
+
+
+
+
