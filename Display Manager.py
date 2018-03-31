@@ -123,8 +123,7 @@ class TextDisplay:
         self.fuelUsed = fuelUsed
 
     def display(self):
-        print(qrcode.constants.ERROR_CORRECT_H)
-        qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=7, border=6)
+ 
 
         data1 = "Vehicle Odometer: " + str(self.odometerRead)
         data2 = "Total Engine Hours: " + str(self.engineHours)
